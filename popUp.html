@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1> Success! yayaya </h1>
+</body>
+<script>
+(function listenForPings() {
+    var openerDomain = 'http://asl';
+    console.log("child active");
+    if (window.addEventListener) {
+      window.addEventListener('message', onPingMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent('message', onPingMessage, false);
+    }
+
+    function onPingMessage(event) {
+      if (1)
+        data =[{name: "aregee", "question_id": "123123123132"}];
+        event.source.postMessage(data, event.origin);
+    }
+  })();
+</script>
+</html>
