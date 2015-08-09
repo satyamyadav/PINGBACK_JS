@@ -3,16 +3,16 @@
   <a href="#/cliceckd"> I am clickec</a>
 </body>
 <script>
-  var w = 700;
-  var h = 480;
+  var w = 300;
+  var h = 500;
   var left = (screen.width / 2) - (w / 2);
   var top = (screen.height / 2) - (h / 2);
   document.addEventListener('click', function (ev) {
-    window.openUniquePopUp('/message_passing/popUp.html', 'popUp', 'width=' + w + ',height=' + h + ',top=' + top + ',left=' + left);
+    window.openUniquePopUp('/recorder/recorder?type=question&resourceId=cd0619021a1d4a5b8f11daba94fa1cca', 'popUp', 'width=' + w + ',height=' + h + ',top=' + top + ',left=' + left);
   }, true);
   (function initializeOpenUniquePopUp() {
     //set this to domain name
-    var openedDomain = 'http://localhost'; //app.utils.domain();
+    var openedDomain = 'http://localhost:3000'; //app.utils.domain();
     var trackedWindows = {};
     window.openUniquePopUp = function (path, windowName, specs) {
       trackedWindows[windowName] = false;
